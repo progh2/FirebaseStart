@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/memecontents"
+        android:id="@+id/memocontents"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -34,7 +34,16 @@
         android:text="메모 등록"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/memecontents" />
+        app:layout_constraintTop_toBottomOf="@+id/memocontents" />
+
+    <Button
+        android:id="@+id/reguserbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사용자 등록"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memobtn" />
 
     <View
         android:id="@+id/line"
@@ -48,7 +57,7 @@
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/memobtn" />
+        app:layout_constraintTop_toBottomOf="@+id/reguserbtn" />
 
     <TextView
         android:id="@+id/memolisttitle"
@@ -61,9 +70,11 @@
         app:layout_constraintTop_toBottomOf="@+id/line" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/memolist"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/memolisttitle" />
