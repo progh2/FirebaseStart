@@ -18,4 +18,8 @@
     <string name="select_where_data">데이터 조회(문서 - where)</string>
     <string name="listener_data">데이터 조회(실시간 업데이트)</string>
     <string name="listener_query_data">데이터조회(실시간업데이트-쿼리)</string>
+    <string name="file_delete">파일 삭제하기</string>
+    <string name="use_metadata">메타 데이터 사용하기</string>
+    <string name="file_download">파일 다운로드</string>
+    <string name="file_upload">파일 업로드</string>
 </resources>
