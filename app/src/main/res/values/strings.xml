@@ -9,4 +9,13 @@
     <string name="facebook">Facebook</string>
     <string name="twitter">Twitter</string>
     <string name="email">Email</string>
+    <string name="firestore">파이어베이스 파이어스토어</string>
+    <string name="add_data">데이터 추가</string>
+    <string name="set_data">데이터 추가(set)</string>
+    <string name="deletedoc">데이터 삭제(문서)</string>
+    <string name="deletefield">데이터 삭제(필드)</string>
+    <string name="select_data">데이터 조회(문서)</string>
+    <string name="select_where_data">데이터 조회(문서 - where)</string>
+    <string name="listener_data">데이터 조회(실시간 업데이트)</string>
+    <string name="listener_query_data">데이터조회(실시간업데이트-쿼리)</string>
 </resources>
