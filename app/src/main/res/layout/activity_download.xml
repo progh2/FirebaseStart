@@ -6,4 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".storage.DownloadActivity">
 
+    <ImageView
+        android:id="@+id/storageimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:contentDescription="@string/downloadfiles"
+        />
+
+    <Button
+        android:id="@+id/localimgdownloadbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/download_from_local"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/imgfirebaseuidnbtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:id="@+id/imgfirebaseuidnbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/download_by_firebaseui"
+        app:layout_constraintLeft_toRightOf="@id/localimgdownloadbtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
