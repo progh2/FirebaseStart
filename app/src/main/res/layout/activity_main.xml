@@ -32,6 +32,16 @@
         android:layout_height="wrap_content"
         android:text="@string/firestore"
         app:layout_constraintTop_toBottomOf="@id/firebaserealtimdbbtn"
+        app:layout_constraintBottom_toTopOf="@id/firebasecloudestoragebtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/firebasecloudestoragebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/firestore"
+        app:layout_constraintTop_toBottomOf="@id/firebasefirestorebtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
