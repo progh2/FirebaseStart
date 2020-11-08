@@ -22,4 +22,5 @@
     <string name="use_metadata">메타 데이터 사용하기</string>
     <string name="file_download">파일 다운로드</string>
     <string name="file_upload">파일 업로드</string>
+    <string name="cloudstorage">파이어베이스 클라우드스토리지</string>
 </resources>
