@@ -26,4 +26,6 @@
     <string name="downloadfiles">downloadFiles</string>
     <string name="download_from_local">로컬 파일로 다운로드</string>
     <string name="download_by_firebaseui">FirebaseUI로 이미지 다운로드</string>
+    <string name="blank">-</string>
+    <string name="get_metadata">메타 데이터 가져오기</string>
 </resources>

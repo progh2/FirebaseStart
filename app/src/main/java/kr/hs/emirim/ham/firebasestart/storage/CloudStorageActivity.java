@@ -11,6 +11,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 import kr.hs.emirim.ham.firebasestart.R;
 
 public class CloudStorageActivity extends AppCompatActivity implements View.OnClickListener {
@@ -53,12 +58,38 @@ public class CloudStorageActivity extends AppCompatActivity implements View.OnCl
             case R.id.downloadbtn:
                 intent = new Intent(this, DownloadActivity.class);
                 break;
+            case R.id.metainfobtn:
+                intent = new Intent(this, MetaInfoActivity.class);
+                break;
+            case R.id.deletebtn:
+                deleteFile();
+                break;
             default:
                 break;
         }
         if(intent != null){
             startActivity(intent);
         }
+    }
+
+    private void deleteFile() {
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference storageRef = storage.getReference();
+        StorageReference deleteRef = storageRef.child("storage/cat.jpg");
+        deleteRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Toast.makeText(getApplicationContext(),
+                        "삭제되었습니다.",Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(),
+                        "삭제하려는데 에러 발생!",Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
