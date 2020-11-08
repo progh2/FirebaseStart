@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import kr.hs.emirim.ham.firebasestart.firestore.FirestoreActivity;
 import kr.hs.emirim.ham.firebasestart.realtimedb.MemoActivity;
+import kr.hs.emirim.ham.firebasestart.storage.CloudStorageActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -21,12 +22,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "MainActivity onCreate 실행됨");
-        Button firebaseauthbtn = findViewById(R.id.firebaseauthbtn);
-        Button firebaserealtimedbbtn = findViewById(R.id.firebaserealtimdbbtn);
-        firebaseauthbtn.setOnClickListener(this);
-        firebaserealtimedbbtn.setOnClickListener(this);
 
+        findViewById(R.id.firebaseauthbtn).setOnClickListener(this);
+        findViewById(R.id.firebaserealtimdbbtn).setOnClickListener(this);
         findViewById(R.id.firebasefirestorebtn).setOnClickListener(this);
+        findViewById(R.id.firebasecloudestoragebtn).setOnClickListener(this);
+
         Log.d(TAG, "MainActivity 버튼 객체 참조 연결하고 리스너 등록");
     }
 
@@ -52,6 +53,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, FirestoreActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.firebasecloudestoragebtn:
+                Log.d(TAG, "파이어베이스 클라우드스토리지 버튼 눌림!");
+                intent = new Intent(this, CloudStorageActivity.class);
+                startActivity(intent);
             default:
                 Log.d(TAG, "모르는 클릭?");
                 break;
